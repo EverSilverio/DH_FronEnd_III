@@ -1,0 +1,25 @@
+h1 {
+    color: navy;
+}
+
+.title {
+    background-color: aquamarine;
+    padding: 10px 5px;
+}
+
+th {
+    background-color: lightblue;
+    padding: 5px 10px;
+}
+
+td {
+    padding: 5px 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #E7E9EB;
+}
