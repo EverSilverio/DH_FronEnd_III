@@ -22,5 +22,5 @@ Luiz Delgado
 Issao 
 ```
    
-## SAMPLE
+## SCREEN SHOT
 ![image](https://user-images.githubusercontent.com/5773748/198160729-ab101ef7-1178-474e-9f05-ea05101e0c3e.png)
