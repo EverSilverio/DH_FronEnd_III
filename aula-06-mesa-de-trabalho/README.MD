@@ -11,3 +11,16 @@
     2. **CSS Normal**: Arquivo css externo de escopo público a toda a aplicação;
     3. **CSS Module**: Arquivo css de escopo local pertencente a um componente específico.
    
+## GRUPO
+```
+Lucas Bernardo, 
+Everton Silverio, 
+Lucas Ferreira, 
+João Victor, 
+Vanessa Fernandes, 
+Luiz Delgado
+Issao 
+```
+   
+## SAMPLE
+![image](https://user-images.githubusercontent.com/5773748/198160729-ab101ef7-1178-474e-9f05-ea05101e0c3e.png)
