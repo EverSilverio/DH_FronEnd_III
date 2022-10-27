@@ -15,9 +15,6 @@ function CardCity({ item }) {
 
 export default CardCity
 
-/* card api com flex*/
-/* nomear div card - div*/
-
 /*
 Lucas Bernardo, 
 Everton Silverio, 
