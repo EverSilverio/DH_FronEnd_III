@@ -58,3 +58,14 @@ tr,
 td {
    text-align: center;
 }
+
+.error {
+   display: flex;
+   justify-content: center;
+}
+
+.error span {
+   color: red;
+   width: 100%;
+   max-width: 900px;
+}

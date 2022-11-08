@@ -11,32 +11,41 @@ function App() {
       frontend: { notas: [], media: 0 }
    });
 
+   const disciplinas = ['database', 'backend', 'frontend']
+
+
    function handleSubmit(e) {
       e.preventDefault();
       setError('')
 
-      const disciplinas = ['database', 'backend', 'frontend']
-
       if (!disciplinas.includes(form.disciplina)) {
-         setError('Disciplina selecionada não é válida')
+         setError(`Disciplina selecionada [${form.disciplina}] não é válida`)
          return;
       }
 
       if ((form.nota < 0 || form.nota > 10) || form.nota == "") {
-         setError('Informe uma nota válida')
+         setError('Informe uma nota válida entre 0 e 10')
          return;
       }
 
+      // armazena objeto alunos atual para add nota e calcular media
       const aux = { ...alunos }
 
+      // adiciona nota nova à materia selecionada
       aux[form.disciplina].notas.push(form.nota);
+
+      // totaliza notas
       const total = aux[form.disciplina].notas.reduce((acc, val) => parseInt(acc) + parseInt(val));
+      
+      // calcula media
       aux[form.disciplina].media = total / aux[form.disciplina].notas.length;
 
       console.log(total, aux[form.disciplina].notas.length)
 
+      // seta alunos com novo objeto alunos
       setAlunos(aux)
 
+      // zera a nota para proxima inclusao
       setForm({...form, nota:0})
 
    }
@@ -44,12 +53,11 @@ function App() {
    function onChangeDisciplina(e) {
       setError('')
 
-      console.log(e.target.value)
-
-      if (e.target.value !== 'database' && e.target.value !== 'backend' && e.target.value !== 'frontend') {
-         setError('Disciplina selecionada não é válida')
+      if (!disciplinas.includes(e.target.value)) {
+         setError(`Disciplina selecionada [${e.target.value}] não é válida`)         
          return;
       }
+
       setForm({ ...form, disciplina: e.target.value })
    }
 
@@ -72,11 +80,12 @@ function App() {
             </div>
             <input id="btn" type="submit" value="Salvar" disabled={form.disciplina == 'devops'} />
 
-
-
          </form>
 
-         <span>{error}</span>
+         <div className="error">
+            <span style={{color: 'red'}}>{error}</span>
+         </div>
+            
 
          <div className="container">
             <table border="1" className="line_title">
