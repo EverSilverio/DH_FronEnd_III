@@ -13,11 +13,11 @@
    
 ## GRUPO
 ```
-Lucas Bernardo, 
-Everton Silverio, 
-Lucas Ferreira, 
-João Victor, 
-Vanessa Fernandes, 
+Lucas Bernardo
+Everton Silverio
+Lucas Ferreira
+João Victor
+Vanessa Fernandes
 Luiz Delgado
 Issao 
 ```
