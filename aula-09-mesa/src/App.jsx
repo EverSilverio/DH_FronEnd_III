@@ -2,7 +2,7 @@ import "./styles.css";
 import { useState } from 'react';
 
 function App() {
-   const [form, setForm] = useState({ disciplina: '', nota: 0 });
+   const [form, setForm] = useState({ disciplina: 'database', nota: 0 });
    const [error, setError] = useState('');
 
    const [alunos, setAlunos] = useState({
@@ -15,7 +15,9 @@ function App() {
       e.preventDefault();
       setError('')
 
-      if (form.disciplina !== 'database' && form.disciplina !== 'backend' && form.disciplina !== 'frontend') {
+      const disciplinas = ['database', 'backend', 'frontend']
+
+      if (!disciplinas.includes(form.disciplina)) {
          setError('Disciplina selecionada não é válida')
          return;
       }
