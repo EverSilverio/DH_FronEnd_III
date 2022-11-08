@@ -57,7 +57,7 @@ function App() {
          <form className="form" onSubmit={handleSubmit}>
             <div className="container_input">
                <select value={form.disciplina} onChange={onChangeDisciplina}>
-                  <option defaultValue >
+                  <option disabled >
                      Selecione uma disciplina
                   </option>
                   <option value="database">Banco de Dados</option>
