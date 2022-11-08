@@ -32,10 +32,10 @@ function App() {
       const aux = { ...alunos }
 
       // adiciona nota nova à materia selecionada
-      aux[form.disciplina].notas.push(form.nota);
+      aux[form.disciplina].notas.push(parseFloat(form.nota));
 
       // totaliza notas
-      const total = aux[form.disciplina].notas.reduce((acc, val) => parseInt(acc) + parseInt(val));
+      const total = aux[form.disciplina].notas.reduce((acc, val) => acc+ val);
       
       // calcula media
       aux[form.disciplina].media = total / aux[form.disciplina].notas.length;
@@ -83,7 +83,7 @@ function App() {
          </form>
 
          <div className="error">
-            <span style={{color: 'red'}}>{error}</span>
+            <span style={{color: 'red'}}>{ error } &nbsp;</span>
          </div>
             
 
@@ -98,19 +98,19 @@ function App() {
                </thead>
                <tbody>
                   <tr>
-                     <td>Banco de Dados</td>
+                     <td title={alunos.database.notas.join(';')}>Banco de Dados</td>
                      <td>{alunos.database.notas.length}</td>
                      <td>{alunos.database.media}</td>
                   </tr>
 
                   <tr>
-                     <td>Desenvolvimento Frontend</td>
+                     <td title={alunos.frontend.notas.join(';')}>Desenvolvimento Frontend</td>
                      <td>{alunos.frontend.notas.length}</td>
                      <td>{alunos.frontend.media}</td>
                   </tr>
 
                   <tr>
-                     <td>Desenolvimento Backend</td>
+                     <td title={alunos.backend.notas.join(';')}>Desenolvimento Backend</td>
                      <td>{alunos.backend.notas.length}</td>
                      <td>{alunos.backend.media}</td>
                   </tr>
