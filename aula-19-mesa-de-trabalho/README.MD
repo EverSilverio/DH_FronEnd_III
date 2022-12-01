@@ -20,3 +20,9 @@ Para que você já possa começar a praticar, te deixamos este [projeto](https:/
     - Implemente o useContext() nos locais onde ele será necessário;
     - Modifique os valores fixos para os novos valores obtidos via contexto global(veja no console.log para a chave de cada elemento).
   - Os detalhes do envio desta atividade, serão apresentados pela equipe docente.
+  
+  ---
+  
+  SAMPLE:
+  
+  ![exemplo](https://raw.githubusercontent.com/EverSilverio/DH_FrontEnd_III/main/aula-19-mesa-de-trabalho/sample/screen_shot.gif)
